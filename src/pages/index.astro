@@ -1,0 +1,90 @@
+---
+const links = [
+  {
+    name: "Case Study",
+    url: "https://medium.com/@artenanagara",
+  },
+
+];
+
+const socialLinks = [
+  {
+    name: "Instagram",
+    url: "https://instagram.com/artenanagara",
+    image: "https://cdn.simpleicons.org/instagram/white",
+  },
+  {
+    name: "Twitter",
+    url: "https://twitter.com/artenanagara_",
+    image: "https://cdn.simpleicons.org/twitter/white",
+  },
+  {
+    name: "TikTok",
+    url: "https://tiktok.com/@artenanagara",
+    image: "https://cdn.simpleicons.org/tiktok/white",
+  },
+  {
+    name: "Github",
+    url: "https://github.com/artenanagara",
+    image: "https://cdn.simpleicons.org/github/white",
+  },
+];
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Artena Nagara</title>
+  </head>
+  <body class="bg-gradient-to-b from-indigo-100 bg-indigo-500">
+    <main
+      class="max-w-sm w-screen min-h-screen mx-auto shadow-lg py-20 px-5 flex flex-col items-stretch justify-center"
+    >
+      <div
+        class="kotak rounded-lg w-[160px] min-h-[160px] h-[160px] self-center"
+      >
+        <img
+          class="w-full h-full rounded-full"
+          src="./src/img/profil.jpg"
+          alt="Helmi Satria"
+        />
+      </div>
+
+      <div class="flex text-indigo-50 flex-col items-center mt-8">
+        <h1 class="text-2xl font-semibold">Artena Nagara</h1>
+        <p>UI Designer</p>
+      </div>
+
+      <ul class="mt-10 space-y-3">
+        {
+          links.map((link) => (
+            <li class="hover:-translate-y-1 transition duration-150 hover:shadow">
+              <a href={link.url}>
+                <div class="kotak font-semibold text-lg text-white text-center tracking-wide rounded-lg w-full bg-indigo-700 hover:bg-indigo-800 duration-150 px-10 py-6">
+                  {link.name}
+                </div>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+
+      <ul class="flex mt-10 justify-center space-x-4">
+        {
+          socialLinks.map((link) => (
+            <li class="hover:-translate-y-1 duration-100">
+              <a href={link.url}>
+                <div class="rounded-full w-[60px] h-[60px] bg-indigo-900 border-2 border-indigo-700 p-4 hover:bg-indigo-800 duration-100">
+                  <img src={link.image} alt="" />
+                </div>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </main>
+  </body>
+</html>
