@@ -27,11 +27,6 @@ const socialLinks = [
     image: "https://cdn.simpleicons.org/linkedin/white",
   },
   {
-    name: "Behance",
-    url: "https://www.behance.net/artenanagara",
-    image: "https://cdn.simpleicons.org/behance/white",
-  },
-  {
     name: "Dribbble",
     url: "https://dribbble.com/artenanagara",
     image: "https://cdn.simpleicons.org/dribbble/white",
@@ -59,9 +54,9 @@ const emailLinks = [
     <meta name="generator" content={Astro.generator} />
     <title>Artena Nagara</title>
   </head>
-  <body class="bg-[#202127]">
+  <body class="bg-gradient-to-t from-neutral-700 to-neutral-900">
     <main
-      class="max-w-sm w-screen min-h-screen mx-auto shadow-lg py-20 px-5 flex flex-col items-stretch justify-center"
+      class="max-w-sm w-screen min-h-screen mx-auto shadow-xl shadow-[#292828] py-20 px-5 flex flex-col items-stretch justify-center"
     >
       <div
         class="kotak rounded-lg w-[160px] min-h-[160px] h-[160px] self-center"
@@ -83,7 +78,7 @@ const emailLinks = [
           links.map((link) => (
             <li class="hover:-translate-y-1 transition duration-150 hover:shadow">
               <a href={link.url}>
-                <div class="kotak font-semibold text-lg text-white text-center tracking-wide rounded-lg w-full bg-indigo-700 hover:bg-indigo-800 duration-150 px-5 py-5">
+                <div class="kotak font-semibold text-lg text-white text-center tracking-wide rounded-lg w-full bg-yellow-400 hover:bg-yellow-900 duration-150 px-5 py-5">
                   {link.name}
                 </div>
               </a>
@@ -93,16 +88,29 @@ const emailLinks = [
       </ul>
 
       <div>
-        <h1 class="font-semibold text-white text-lg text-center mt-5">Any interesting ideas to work on?</h1>
+        <h1 class="font-semibold text-white text-lg text-center mt-8">Any interesting ideas to work on?</h1>
         <p class="font-normal text-slate-200 text-center text-xs mt-2">Don't hesitate to discuss with, a cup of coffee would help brain to works</p>
       </div>
+      
+      <!-- 
+      <div class="mt-4">
+        { 
+        emailLinks.map((link) => (
+          <a href={link.url}>
+            <div class="kotak font-semibold text-lg text-white text-center tracking-wide rounded-lg w-full bg-yellow-400 hover:bg-yellow-900 duration-150 px-2 py-2">
+              {link.name}
+            </div>
+          </a>
+          ))
+          }
+      </div> -->
 
       <ul class="flex mt-5 justify-center space-x-4">
         {
           socialLinks.map((link) => (
             <li class="hover:-translate-y-1 duration-100">
               <a href={link.url}>
-                <div class="rounded-full w-[48px] h-[48px] bg-indigo-900 border-2 border-indigo-700 p-4 hover:bg-indigo-800 duration-100">
+                <div class="rounded-full w-[48px] h-[48px] bg-yellow-400 border-2 border-yellow-900 p-4 hover:bg-yellow-800 duration-100">
                   <img src={link.image} alt="" />
                 </div>
               </a>
